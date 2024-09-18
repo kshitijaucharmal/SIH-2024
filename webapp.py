@@ -3,23 +3,30 @@ import streamlit as st
 st.set_page_config(layout="wide",page_title="Milkdromeda")  #new
 #-- page setup
 # take a note that streamlit used '\' as escape sequence so even if you are in windows use '/' in paths 
-home_page=st.Page(
-    page="views/home.py",
+# home_page=st.Page(
+#     page="views/home.py",
+#     title="SAR image enhancer ",
+#     # icon="😊",
+#     default=True,
+# )
+
+demo_home_page=st.Page(
+    page="views/homey.py",
     title="SAR image enhancer ",
-    icon="😊",
+    # icon="😊",
     default=True,
 )
 
 aboutSAR_page=st.Page(
     page="views/about_SAR.py",
     title="What is SAR ?",
-    icon="🤓",
+    # icon="🤓",
 )
 
 aboutUS_page=st.Page(
     page="views/about_US.py",           
     title="Our team",
-    icon="😎",
+    # icon="😎",
 )
 
 #---creating a navigation menu
@@ -30,7 +37,8 @@ aboutUS_page=st.Page(
 # Navigation setup(With sections)
 pg=st.navigation(
     {
-        "Home":[home_page],
+        # "Home":[home_page,demo_home_page],
+        "Home":[demo_home_page],
         "Info":[aboutSAR_page,aboutUS_page],
     }
 )
