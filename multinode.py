@@ -145,7 +145,7 @@ def prepare_dataloader(dataset: Dataset, batch_size: int):
 
 def main(save_every: int, total_epochs: int, batch_size: int, snapshot_path: str = "snapshot.pt"):
     ddp_setup()
-    base_dir = "./dataset/v2"
+    base_dir = "./v_2"
     categories = ['agri', 'barrenland', 'grassland', 'urban']
     input_output_pairs = []
     for category in categories:
